@@ -1,11 +1,79 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
-    </content>
-    <orderEntry type="inheritedJdk" />
-    <orderEntry type="sourceFolder" forTests="false" />
-  </component>
-</module>
+public class Activity {
+    private int ActivityWidth;
+    private int ActivityHeight;
+    private String Color;
+    private int Transparency;
+    private String Movable;
+
+    public Activity(int ActivityWidth, int ActivityHeight, String Color, int Transparency, String Movable) {
+        this.ActivityWidth = ActivityWidth;
+        this.ActivityHeight = ActivityHeight;
+        this.Color = Color;
+        this.Transparency = Transparency;
+        this.Movable = Movable;
+    }
+
+    public int getActivityWidth() {
+        return this.ActivityWidth;
+    }
+
+    public void setActivityWidth(int ActivityWidth) {
+        this.ActivityWidth = ActivityWidth;
+    }
+
+    public int getActivityHeight() {
+        return this.ActivityHeight;
+    }
+
+    public void setActivityHeight(int ActivityHeight) {
+        this.ActivityHeight = ActivityHeight;
+    }
+
+    public String getColor() {
+        return this.Color;
+    }
+
+    public void setColor(String Color) {
+        this.Color = Color;
+    }
+
+    public int getTransparency() {
+        return this.Transparency;
+    }
+
+    public void setTransparency(int Transparency) {
+        this.Transparency = Transparency;
+    }
+
+    public String getMovable() {
+        return this.Movable;
+    }
+
+    public void setMovable(String Movable) {
+        this.Movable = Movable;
+    }
+
+    static void onStart() {
+        System.out.println("Входная точка приложения");
+    }
+
+    static void onCreate() {
+        System.out.println("Инициализация фрагментов");
+    }
+
+    static void onPause() {
+        System.out.println("Сворачивание приложения");
+    }
+
+    static void onStop() {
+        System.out.println("Остановка активити");
+    }
+
+    static void onResume() {
+        System.out.println("Экраны снова видны пользователю");
+    }
+
+    static void onDestroy() {
+        System.out.println("Закрытие активити");
+    }
+}
