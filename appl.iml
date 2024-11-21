@@ -1,11 +1,43 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
-    </content>
-    <orderEntry type="inheritedJdk" />
-    <orderEntry type="sourceFolder" forTests="false" />
-  </component>
-</module>
+public class Application {
+    private String nameApp;
+    private String Version;
+    private String Resolution;
+
+    public Application(String nameApp, String Version, String Resolution) {
+        this.nameApp = nameApp;
+        this.Version = Version;
+        this.Resolution = Resolution;
+    }
+
+    public String getnameApp() {
+        return this.nameApp;
+    }
+
+    public void setnameApp(String nameApp) {
+        this.nameApp = this.nameApp;
+    }
+
+    public String getVersion() {
+        return this.Version;
+    }
+
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
+    public String getResolution() {
+        return this.Resolution;
+    }
+
+    public void setResolution(String Resolution) {
+        this.Resolution = Resolution;
+    }
+
+    static void onStart(String nameApp) {
+        System.out.println("Стартовая точка программы " + nameApp);
+    }
+
+    static void onClose() {
+        System.out.println("Закрытие программы");
+    }
+}
